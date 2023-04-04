@@ -6,7 +6,7 @@ box::use(
 
 box::use(
   app/view/Riders/rTab,
-  
+  app/view/Bikes/bTab
 )
 
 
@@ -17,7 +17,8 @@ ui <- function(id) {
   navbarPage(
     "Divvy",
     theme = bs_theme(bootswatch = "zephyr"),
-    rTab$ui(ns("rtab"))
+    rTab$ui(ns("rtab")),
+    bTab$ui(ns("btab"))
   )
 }
 
@@ -25,5 +26,6 @@ ui <- function(id) {
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
     rTab$server("rtab")
+    bTab$server("btab")
   })
 }
