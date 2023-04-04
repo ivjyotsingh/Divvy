@@ -26,7 +26,7 @@ ui <- function(id) {
              column(12,
                     card(
                       height = 450,
-                      card_header("Bike composition across months for a year"),
+                      card_header("Bike usage across different years"),
                       card_body_fill(bByYearPie$ui(ns("bbyp"))),
                       full_screen = TRUE
                     )),
@@ -46,7 +46,7 @@ ui <- function(id) {
              column(8,
                     card(
                       height = 300,
-                      card_header("Bike composition of a year"),
+                      card_header("Bike usage across months for a year"),
                       card_body_fill(echarts4rOutput(ns("bcbm"))),
                       full_screen = TRUE
                     ),
