@@ -20,3 +20,10 @@ fetch_bikes_01 <- function(){
   bikes
   
 }
+
+#' @export
+fetch_time_01 <- function(){
+  
+  read.csv(here::here("data","time_01.csv"))
+  
+}
