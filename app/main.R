@@ -7,7 +7,8 @@ box::use(
 box::use(
   app/view/Riders/rTab,
   app/view/Bikes/bTab,
-  app/view/TimeOfDay/todTab
+  app/view/TimeOfDay/todTab,
+  app/view/TimeDuration/tdTab
 )
 
 #' @export
@@ -19,7 +20,8 @@ ui <- function(id) {
     theme = bs_theme(bootswatch = "zephyr"),
     rTab$ui(ns("rtab")),
     bTab$ui(ns("btab")),
-    todTab$ui(ns("todtab"))
+    todTab$ui(ns("todtab")),
+    tdTab$ui(ns("tdtab"))
   )
 }
 
@@ -29,5 +31,6 @@ server <- function(id) {
     rTab$server("rtab")
     bTab$server("btab")
     todTab$server("todtab")
+    tdTab$server("tdtab")
   })
 }
